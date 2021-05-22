@@ -41,4 +41,34 @@ function jugar(){
 
         alert("Ganaste con:  " + total_t + " Suerte c:");
         window.location.reload();
+    }if(turno==1 && (total_t==2 || total_t==3 || total_t==12))
+    {
+        turno = 1;
+
+        console.log("Reinicia")
+
+        alert("Perdiste con:  "+total_t + " Mala suerte :c");
+        window.location.reload();
     }
+    if(turno>=2 && total_t==7)
+    {
+        turno = 1;
+
+        console.log("Reinicia")
+        
+        alert("Perdiste con:  "+total_t + " Mala suerte :c");
+        window.location.reload();
+    }
+    if((turno>=2) && (total_t==punto))
+    {
+        turno = 1;
+        console.log("se reinició el turno")
+        alert("Ganaste con:  " + total_t + " Suerte c:");
+        window.location.reload();
+    }
+    if((turno==1) && (total_t=4 || total_t==5 || total_t==6 || total_t==8 || total_t==9 || total_t==10))
+    {
+        punto = total_t
+    }
+        turno = turno + 1;  
+}
